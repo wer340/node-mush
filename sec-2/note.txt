@@ -1,0 +1,9 @@
+9---
+async  and sync    pair method
+
+async not blocking
+10--
+node core functionality events  plural  s not forgot
+ event module is a class    new event()
+emit method raise  and shouted and notificate to add listener [or on]
+on()first arg name event  two arg callback
