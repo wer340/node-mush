@@ -1,0 +1,62 @@
+1--
+npm
+
+3-
+underscore package
+
+npm i name    no need  latest version --save
+npm list --depth=0
+
+5--
+every dependency  of each package 
+
+
+7--
+semantic versioning
+^ 4.X caret  major.minor.patch 4.X checksum
+~ 4.3.X tilde     package update  sensitive decimal place  percise
+latest version dependency uptodate  
+"4.3.2" this version 
+for find out version  in node module in package and package.json
+or npm list 
+
+
+9--
+npm view name package
+npm  view name package  version  list versions
+
+10---
+install specific version
+npm i name@1.2.3
+
+11---
+list package   outsate
+npm outdated
+npm update     update to latest version
+current   wanted  latest
+npm update   > wanted update
+if  latest update
+npm i -g  npm-check-updates
+> npm-check-updates > latest version
+12--
+npm i jshint --save-dev  dev dependencies
+
+13--
+unistall package 
+npm un mongoose 
+14--
+global package   
+>>&&&***************npm view npm versions
+********************npm -g list depth=0
+********************npm -g outdated
+
+15--
+publish package 
+index.js  entry point 
+
+npm login
+npm publish
+16--
+updating package
+npm version minor  // major   //patch 
+npm publish
