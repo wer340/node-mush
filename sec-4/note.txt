@@ -22,3 +22,15 @@ get("/app/:id")  :id params     req.params  give a object
 params is required  and query optional
 https://medium.com/hackernoon/12-amazing-javascript-shorthand-techniques-fef16cdbc7fe
 https://www.sitepoint.com/shorthand-javascript-techniques/
+
+
+8--post 
+with desktop postman test
+
+11----
+input valdition
+module term of class const name type pascal case
+replace  manually check validtion
+joi package install
+that >  if(!name||name.length>3){res.state(404).send()}
+joi handle it 
