@@ -1,0 +1,24 @@
+2---
+representional state transfer  restful
+CRUD opreations    
+http method  get post patch delete
+4---
+express
+app=express()
+app.get
+app.post
+app.patch
+app.delete
+5-nodemon
+6---
+in your machine select arbitraty number
+in server daynamicly select pick a port 
+process.env.PORT  env envirement varible  that there is outside app
+export PORT=5000  can be define port
+7--
+route
+get("/app/:id")  :id params     req.params  give a object
+?sortby="name"   query        req.query
+params is required  and query optional
+https://medium.com/hackernoon/12-amazing-javascript-shorthand-techniques-fef16cdbc7fe
+https://www.sitepoint.com/shorthand-javascript-techniques/

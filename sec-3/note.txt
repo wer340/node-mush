@@ -23,7 +23,7 @@ or npm list
 
 9--
 npm view name package
-npm  view name package  version  list versions
+npm  view name package  version  be shows >list versions
 
 10---
 install specific version
