@@ -27,13 +27,17 @@ app.post("/app/course/",(req,res)=>{
     const Schima=Joi.object({
         name:Joi.string().min(3).required()
     })
-    // if (!req.body.name||req.body.name.length<3){
-    //     res.status("404").send("<h1>your name check </h1>")
-    // }
-    const result=Schima.validate(req.body.name)
+
+    const resultL=Schima.validate(req.body)
     
     // courses.push(course)
-    console.log(result)
+    console.log(`
+    body======${req.body}
+    \n
+    error ====(${resultL.error})
+    \n
+    value======${resultL.value}
+    `)
     // res.send(result.error)
     return;
 })
