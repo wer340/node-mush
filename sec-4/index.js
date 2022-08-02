@@ -30,7 +30,7 @@ app.post("/app/course/",(req,res)=>{
 
     const resultL=Schima.validate(req.body)
     if (resultL.error){
-        res.send(resultL.error)
+        res.send(resultL.error.details[0].message)
         return;//return the function 
 
     }
