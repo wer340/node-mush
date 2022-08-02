@@ -29,17 +29,16 @@ app.post("/app/course/",(req,res)=>{
     })
 
     const resultL=Schima.validate(req.body)
+    if (resultL.error){
+        res.send(resultL.error)
+        return;//return the function 
+
+    }
     
-    // courses.push(course)
-    console.log(`
-    body======${req.body}
-    \n
-    error ====(${resultL.error})
-    \n
-    value======${resultL.value}
-    `)
-    // res.send(result.error)
-    return;
+        courses.push(course)
+        res.send(courses)
+    
+   
 })
 
 
