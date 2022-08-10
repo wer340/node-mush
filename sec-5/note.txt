@@ -1,0 +1,19 @@
+1---
+midlware
+configuration
+debugging
+temolating engines
+
+2---
+req  >  json()  > route
+end up> next()  pip another midlware
+
+3---
+you should better midlaware funvtion put in seprate module
+func(req,res,next)
+console.log()
+next()
+4---
+built in midlware in express
+1-
+app.use(express.json())
