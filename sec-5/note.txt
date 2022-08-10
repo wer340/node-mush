@@ -1,3 +1,4 @@
+
 1---
 midlware
 configuration
@@ -17,3 +18,34 @@ next()
 built in midlware in express
 1-
 app.use(express.json())
+or app.use(bodyParser.json())
+app.use(express.urlencoded({extended:true}))//key=value&key=value
+{extended:true}>>we this we can pass array and complex object using urlencoded format
+app.use(express.static('public'))
+serve file into static dir 
+means  by   can in adrres bar browser type name file and loaded
+
+5--
+third party of midlware     
+use mush midlware cuases slow down request
+intoudce  impotatnt third party
+helmet  app.use(helmet())
+
+morgan app.use(morgan('tiny'))  config  time of request test production
+
+6---
+develop envirement or production envirement
+assume http request or morgan third party 
+enable to devlopment envirement
+
+> process object global object node
+
+process.env.NODE_ENV //if deafult not set   > undefined
+we can set this  test stage development  or production
+we are the another way thats get current envirement app object
+ app.get('env')  env~ arg >  use setting of app object
+thid method internally this uses the envirement variable[global.process.env.NODE_ENV]
+detect the kernell envirement  however if variable[...NODE_ENV]
+NOT set  in kernell  this method [app.get('env')] deafult return development 
+
+we can set  like port bash-command  >export  NODE_ENV='production'
