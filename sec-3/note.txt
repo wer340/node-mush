@@ -49,7 +49,7 @@ global package
 >>&&&***************npm view npm versions
 ********************npm -g list depth=0
 ********************npm -g outdated
-
+********************npm i -g name@8.17.0
 15--
 publish package 
 index.js  entry point 

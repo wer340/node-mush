@@ -1,4 +1,7 @@
+//notice set export before use  export app_pass=123 and export DEBUG=APP:*
 const Joi=require("joi")
+const dbDebugger=require("debug")("app:db")
+const startupDebugger=require("debug")("app:startup")
 const morgan=require("morgan")
 const helmet=require("helmet")
 const config=require("config")
@@ -18,14 +21,14 @@ app.use(express.json())
 app.use(express.static("public"))
 app.use(helmet())
 
-console.log(`NODE_ENV : ${process.env.NODE_ENV}`)
-console.log(`app get : ${app.get('env')}`)
+startupDebugger(`NODE_ENV : ${process.env.NODE_ENV}`)
+startupDebugger(`app get : ${app.get('env')}`)
 
 
 if(app.get('env')=="development"){
    
     app.use(morgan("tiny"))
-    console.log("morgan enabled ...")
+    startupDebugger("morgan enabled ...")
 }
 
 // configuration
@@ -71,5 +74,5 @@ function valid(item){
 
 
 app.listen(3000,()=>{
-    console.log("port 3000 is running")
+    dbDebugger("port 3000 is running")
 })

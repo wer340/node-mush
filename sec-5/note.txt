@@ -79,3 +79,12 @@ mapping  this var  into  custom-environment-variables.json
 	}
 }
 }
+for call    config.get('mail.password')
+
+8---
+debugging 
+console.log best friend for programmer  but many time use 
+this tool is tedious
+install i debug 
+const debug=require("debug")("app:debug") arbitrray name 
+export DEBUG=app:* wildcard  all   or app:debug
