@@ -54,3 +54,28 @@ we can set  like port bash-command  >export  NODE_ENV='production'
 config  rc package  and  config package
 https://www.npmjs.com/package/config   
 https://snyk.io/advisor/npm-package/rc
+
+better solution npm i config
+mkdir config  
+touch default.json  development.json production.json custom-environment-variables.json
+
+{
+"name":"my app"
+"mail":{
+	"host": srver.in/dkd
+	}
+}
+}
+
+for call    config.get('mail.host')
+you should not save configuration secret in config
+database email server and ..
+export app_paaword=1234
+mapping  this var  into  custom-environment-variables.json
+{
+"name":"my app"
+"mail":{
+	"password": "app_paaword"
+	}
+}
+}

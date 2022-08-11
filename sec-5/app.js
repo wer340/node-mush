@@ -28,6 +28,13 @@ if(app.get('env')=="development"){
     console.log("morgan enabled ...")
 }
 
+// configuration
+
+console.log(`my name app is : ${config.get('name')}`)
+console.log(`my email server app is : ${config.get('mail.host')}`)
+console.log(`my email server pass : ${config.get('mail.pass')}`)
+
+
 actress=[];
 
 
