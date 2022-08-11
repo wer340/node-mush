@@ -49,3 +49,8 @@ detect the kernell envirement  however if variable[...NODE_ENV]
 NOT set  in kernell  this method [app.get('env')] deafult return development 
 
 we can set  like port bash-command  >export  NODE_ENV='production'
+
+7--
+config  rc package  and  config package
+https://www.npmjs.com/package/config   
+https://snyk.io/advisor/npm-package/rc

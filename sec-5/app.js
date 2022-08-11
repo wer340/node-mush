@@ -1,17 +1,33 @@
 const Joi=require("joi")
+const morgan=require("morgan")
+const helmet=require("helmet")
+const config=require("config")
 const logger=require("./logger")
 const express=require("express")
-const { nextTick } = require("process")
+const bodyParser=require("body-parser")
 const app =express()
+//bodyparser~express
+app.use(express.urlencoded({extended:true}))//key=value&key=value
 app.use(express.json())
+// app.use((req,res,next)=>{
+//     console.log("running")
+//     next()
+// })
+// app.use(logger)
 
-app.use(express.urlencoded())//key=value&key=value
+app.use(express.static("public"))
+app.use(helmet())
 
-app.use((req,res,next)=>{
-    console.log("running")
-    next()
-})
-app.use(logger)
+console.log(`NODE_ENV : ${process.env.NODE_ENV}`)
+console.log(`app get : ${app.get('env')}`)
+
+
+if(app.get('env')=="development"){
+   
+    app.use(morgan("tiny"))
+    console.log("morgan enabled ...")
+}
+
 actress=[];
 
 
@@ -21,6 +37,7 @@ res.send("data")
 })
 
 app.post("/add",(req,res)=>{
+    console.log(req.body)
     result=valid(req.body)
    
     if(result.error) {res.status(404).send("<h1>error:"+result.error.details[0].message+"</h1>")}
