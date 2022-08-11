@@ -1,5 +1,6 @@
 //notice set export before use  export app_pass=123 and export DEBUG=APP:*
 const Joi=require("joi")
+const pug =require("pug")
 const dbDebugger=require("debug")("app:db")
 const startupDebugger=require("debug")("app:startup")
 const morgan=require("morgan")
@@ -36,7 +37,10 @@ if(app.get('env')=="development"){
 console.log(`my name app is : ${config.get('name')}`)
 console.log(`my email server app is : ${config.get('mail.host')}`)
 console.log(`my email server pass : ${config.get('mail.pass')}`)
+//set view engine
 
+app.set('view engine','pug')
+app.set('views','./views')
 
 actress=[];
 
@@ -56,6 +60,11 @@ app.post("/add",(req,res)=>{
     console.log(actress)
     res.send("Successful")
     }
+})
+
+app.get("/pic", (req,res)=>{
+    res.render("index",{title:"photo",message:"jenifer"})
+
 })
 // app.patch()
 // app.delete()

@@ -88,3 +88,13 @@ this tool is tedious
 install i debug 
 const debug=require("debug")("app:debug") arbitrray name 
 export DEBUG=app:* wildcard  all   or app:debug
+
+9--
+template engines   
+pug 
+mustache 
+ejs
+app.set('view engine' ,'pug')
+app.set('views','./views')
+img(src)
+we make restful service  we dont realy need to tempalte engine
