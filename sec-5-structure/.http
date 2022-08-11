@@ -1,0 +1,21 @@
+GET  http://localhost:3000/
+
+
+###
+
+POST http://localhost:3000/add
+Content-Type: application/json
+
+{
+    
+    "name":"scarlett",
+    "age":45,
+    "movie":"Avenger"
+}
+###
+
+POST http://localhost:3000/add
+Content-Type: application/x-www-form-urlencoded
+
+name=emilia&age=37&movie=GameOfThrones
+
