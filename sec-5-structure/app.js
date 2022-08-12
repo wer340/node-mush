@@ -6,6 +6,7 @@ const helmet=require("helmet")
 const config=require("config")
 const add=require("./routes/add")
 const pic=require("./routes/pic")
+const genres=require("./routes/genres")
 const logger=require("./middleware/logger")
 const express=require("express")
 const bodyParser=require("body-parser")
@@ -26,9 +27,10 @@ if(app.get('env')=="development"){
     app.use(morgan("tiny"))
    
 }
-//  pip api rote to entry point
+//  pip api route to entry point
 app.use('/add',add)
 app.use('/pic',pic)
+app.use('/genres',genres)
 
 // configuration
 console.log(`my name app is : ${config.get('name')}`)

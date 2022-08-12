@@ -110,5 +110,21 @@ structure
 how  to properly make structure
 example this app.js  87 line of code
 only a simple app  
-in large of  app  also need make a proper strucrure
+in large app  also need make a proper strucrure
 
+f2  for rename
+
+make a dir   by name  routes
+
+then  collect   a route   app.get("/form") app.post("form") delete patch put
+const express=require(express)
+const router=express.Router()
+rename all app to router
+https://expressjs.com/en/guide/routing.html
+
+13--
+project
+
+in  route name  get(/:id) item id call by params 
+req.params.id 
+this is wrong if to use req.body.id

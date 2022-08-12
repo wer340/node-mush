@@ -1,7 +1,7 @@
 const express=require('express');
 const Joi = require('joi');
 const router=express.Router()
-actress=[];
+const actress=[];
 router.get("/", (req,res)=>{
     res.send("data")
     })
