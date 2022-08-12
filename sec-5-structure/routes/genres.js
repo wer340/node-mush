@@ -13,6 +13,7 @@ const genres=[
 router.get("/:id", (req,res)=>{
    
  const checkId=genres.find(c=>c.id==parseInt(req.params.id))
+ console.log(!checkId)
  try{
     res.send(`
     <h1>id : ${checkId.id}</h1>
