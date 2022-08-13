@@ -1,0 +1,14 @@
+1--
+async and sync 
+sync  or blocking  
+and  async non blocking
+
+settimeout()  a  async func  [non blocking]
+Asynchronous does not mean concerns or multi thread
+our application usually single thread 
+
+callbacks
+promise 
+async/await
+ ++++
+replace   return   with  callback 

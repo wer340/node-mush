@@ -3,8 +3,9 @@ const Joi = require('joi');
 const router=express.Router()
 const actress=[];
 router.get("/", (req,res)=>{
-    res.send("data")
+    res.send("data") 
     })
+    !=
     
     router.post("/",(req,res)=>{//when set app.use("/add",add) another can this page set / as route
         console.log(req.body)
