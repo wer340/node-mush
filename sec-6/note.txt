@@ -12,3 +12,7 @@ promise
 async/await
  ++++
 replace   return   with  callback 
+js deafult  return undefined  if valuize arg but function throw error
+sync implementaion easy to read  but async  difficult 
+5--
+Named Function
