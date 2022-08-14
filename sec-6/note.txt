@@ -16,3 +16,9 @@ js deafult  return undefined  if valuize arg but function throw error
 sync implementaion easy to read  but async  difficult 
 5--
 Named Function
+from child nested start function naming   arg resolve  becuse parameter is whithout pranthesess
+6--
+promises is a object  > hold the eventual result of async operations
+ best practise pass object erro to  reject parameter
+reject(new Error('message'))  err.message
+
