@@ -22,3 +22,6 @@ promises is a object  > hold the eventual result of async operations
  best practise pass object erro to  reject parameter
 reject(new Error('message'))  err.message
 
+10---
+promise.all([p1,p2]).then()  one of them error  return err
+promise.race([p1,p2]).then()  one of them as soon as complete return this once
