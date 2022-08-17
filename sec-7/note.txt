@@ -1,0 +1,22 @@
+1----
+mongod  dii 
+mongo db is no-sql db 
+you simply store json object
+brew --> package manager mac os
+
+3----- install in windows
+uncheck install mongodb compass   after download separtly
+becauuse  after install comppass look at the server but no thing see ant thing
+>md c:\data\db    go to this adress   power sahll
+system envirement  >  append  path this adrres path  with sync by version  at know time  4.0
+ 
+then install compass
+https://www.mongodb.com/try/download/compass
+map site > /try    mange download  tools and atlas and mongodb
+
+----
+4---conecting mongo
+
+npm i mongoose@5.0.1
+mongoose.connect(localhost).then() return a promise
+.catch ((err)=>{console.error("",err)} 
