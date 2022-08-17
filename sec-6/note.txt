@@ -23,5 +23,11 @@ promises is a object  > hold the eventual result of async operations
 reject(new Error('message'))  err.message
 
 10---
+paralell promise
 promise.all([p1,p2]).then()  one of them error  return err
 promise.race([p1,p2]).then()  one of them as soon as complete return this once
+
+11--
+await async
+decorate function with async  when use await
+with try catch handle error
