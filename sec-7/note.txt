@@ -5,6 +5,7 @@ you simply store json object
 brew --> package manager mac os
 
 3----- install in windows
+notice to version when write into path sys envirement 
 uncheck install mongodb compass   after download separtly
 becauuse  after install comppass look at the server but no thing see ant thing
 >md c:\data\db    go to this adress   power sahll
@@ -20,3 +21,42 @@ map site > /try    mange download  tools and atlas and mongodb
 npm i mongoose@5.0.1
 mongoose.connect(localhost).then() return a promise
 .catch ((err)=>{console.error("",err)} 
+
+5--- schima
+collaction in mongodb is like table in relational database
+document in mongodb is kind of similar a row is relational db
+relational db have table and row  mongo db have collaction and document
+is document is container of key value pair
+_id  --> is uniq identifier 
+tag--> key value pair
+date 
+author
+ispublished
+__v  version
+in mongoose we have a consept call schima  
+this is specfic to monggose not part of mongodb
+we use schima in mongoose to define shape of document
+in mongodb collection 
+
+class schima from mongoose
+new mongoose.schima({})
+schima type
+string 
+number
+date
+buffer
+boolean
+objectID
+array
+
+6--- model
+mongoose.model(,) take two arg
+first arg is singular name of collection model 
+second arg  shape of document 
+then const Class= mongoose.model("name collection","pattern schima")
+then data=new Class({name:"emilia",...) with look schima fill data
+
+
+7---  save   data
+await data.save()  is async opreation
+best practise this instanse from class filled data and save pack into a async funtion
