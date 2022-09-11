@@ -73,3 +73,28 @@ slelect like projection
 //in
 //nin  not in
 find({price:{$gt:10}})
+find({price:{$in:[10,12,15,30]}})  price to be these number
+10----logical operator
+//or
+//and
+.find().or([{name:"emilia"},{name:"scarlett"}]) result name to be ether names
+
+11----regular expression 
+this syntax is represent of rgex   /pattern /
+.find({name:/^emilia /})  name starte first with emilia
+.find({name:/emilia$/})  name end up   with emilia
+.find({name:/.*emilia.*/})  name have emilia part of word
+
+12-----counting
+find().count()
+
+13----- pagination 
+in real world  have
+api/movie?page_number=3&page_size=10
+page_number=3
+page_size=10
+find().skip((page_number-1)*page_size).limit(page_size)
+
+14-----exercise
+mongoimport --db  name   --collection name  --file  address file  --jsonArray 
+last flag  for  in   my  json file is as [{},{},{}]
