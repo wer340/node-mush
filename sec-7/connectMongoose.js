@@ -8,7 +8,7 @@ const schemaData=new mongoose.Schema({ //! Schema class pascal case no schima
     name:String,
     author:String, //! capital case S
     tags:[ String ],
-    date:{type:Date,deafult:Date.now},
+    date:{type:Date,default:Date.now},
     isPublished:Boolean // ! capital case Boolean
 });
 // *classes object
@@ -27,7 +27,7 @@ async function dataSendToDb(){
     
     )
     const result=await data.save() // *is synchros  operation 
-    console.log(result)
+    
 }
 
 dataSendToDb()
