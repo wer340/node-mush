@@ -1,6 +1,6 @@
 const mongoose=require("mongoose");
 //address host write in config file in here is talked  mongo db  
-mongoose.connect("mongodb://localhost/playground").//automatically playground db is made
+mongoose.connect("mongodb://localhost/playground?").//automatically playground db is made
 then(()=>console.log("connecting mongoose successfully ..."))
 .catch((err)=>console.error("error has occurred ... ",err))
 
@@ -30,4 +30,14 @@ async function dataSendToDb(){
     
 }
 
-dataSendToDb()
+async function getDate(){
+    const abstractCollection=await Data
+    .find({name:"emilia",isPublished:true},'name')
+    .limit(1)
+    
+    
+    
+    console.log(abstractCollection)
+
+}
+getDate()
