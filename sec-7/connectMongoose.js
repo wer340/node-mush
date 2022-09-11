@@ -33,7 +33,7 @@ async function dataSendToDb(){
 async function getDate(){
     const abstractCollection=await Data
     .find({name:"emilia",isPublished:true},'name')
-    .limit(1)
+    .count()
     
     
     

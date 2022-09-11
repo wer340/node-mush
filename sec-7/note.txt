@@ -60,3 +60,16 @@ then data=new Class({name:"emilia",...) with look schima fill data
 7---  save   data
 await data.save()  is async opreation
 best practise this instanse from class filled data and save pack into a async funtion
+
+8--- querying selctor   q.prototype
+Data.find({name:"emilia"}).limit(3).sort({name:1}).select({name:1 , tag:1})  
+slelect like projection 
+
+9----comparison opreators
+//eq  equal
+//ne  not eaual
+//gt  and gte   greater than and equal
+//lt  and lte   less than  and less than or equal
+//in
+//nin  not in
+find({price:{$gt:10}})
