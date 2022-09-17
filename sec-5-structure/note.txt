@@ -10,7 +10,7 @@ req  >  json()  > route
 end up> next()  pip another midlware
 
 3---
-you should better midlaware funvtion put in seprate module
+you should better midlaware function put in seprate module
 func(req,res,next)
 console.log()
 next()

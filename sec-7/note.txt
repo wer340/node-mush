@@ -84,7 +84,9 @@ this syntax is represent of rgex   /pattern /
 .find({name:/^emilia /})  name starte first with emilia
 .find({name:/emilia$/})  name end up   with emilia
 .find({name:/.*emilia.*/})  name have emilia part of word
-
+/.+?(?=ion)/  before  ion  end up
+/(?<=\_).* /after undescore mark select
+/(?<=\_).*.+?(?=.jpg)/
 12-----counting
 find().count()
 
